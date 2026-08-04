@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application Form | IMPACT PROJECT PNG</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/application.css">
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="logo">IMPACT <span>PNG</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="criteria.html">Eligibility</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="apply.html" class="btn-inscrire">Sign Up</a></li>
+      <li><a href="apply.html" class="btn-cta active">Submit Your Request</a></li>
+    </ul>
+    <div class="burger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<section class="hero" style="min-height:320px; background-image: url('assets/img/hero-contact.jpg');">
+  <div class="hero-content">
+    <h1>Financial Aid Application Form</h1>
+    <p>Fill in all the information below. You will instantly receive a case number after submission.</p>
+  </div>
+</section>
+
+<div class="container">
+  <form id="application-form" class="form-wrapper" novalidate>
+
+    <!-- PERSONAL INFO -->
+    <div class="form-section">
+      <h3>Personal Information</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Last Name <span class="req">*</span></label>
+          <input type="text" name="last_name" required>
+        </div>
+        <div class="form-group">
+          <label>First Name <span class="req">*</span></label>
+          <input type="text" name="first_name" required>
+        </div>
+        <div class="form-group">
+          <label>Date of Birth <span class="req">*</span></label>
+          <input type="date" name="date_of_birth" required>
+        </div>
+        <div class="form-group">
+          <label>Gender <span class="req">*</span></label>
+          <select name="gender" required>
+            <option value="">-- Select --</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Email <span class="req">*</span></label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label>Phone <span class="req">*</span></label>
+          <input type="tel" name="phone" required placeholder="+675 ...">
+        </div>
+        <div class="form-group">
+          <label>ID Document Type <span class="req">*</span></label>
+          <select name="id_type" required>
+            <option value="">-- Select --</option>
+            <option value="Passport">Passport</option>
+            <option value="National ID Card">National ID Card</option>
+            <option value="Driver's License">Driver's License</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>ID Document Number <span class="req">*</span></label>
+          <input type="text" name="id_number" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOCATION -->
+    <div class="form-section">
+      <h3>Location</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Province <span class="req">*</span></label>
+          <select name="province" required>
+            <option value="">-- Select --</option>
+            <option>National Capital District (Port Moresby)</option>
+            <option>Western Province</option>
+            <option>Gulf Province</option>
+            <option>Central Province</option>
+            <option>Milne Bay</option>
+            <option>Oro Province</option>
+            <option>Southern Highlands</option>
+            <option>Enga Province</option>
+            <option>Western Highlands</option>
+            <option>Simbu Province</option>
+            <option>Eastern Highlands</option>
+            <option>Morobe Province</option>
+            <option>Madang Province</option>
+            <option>East Sepik</option>
+            <option>West Sepik (Sandaun)</option>
+            <option>Manus Province</option>
+            <option>New Ireland</option>
+            <option>East New Britain</option>
+            <option>West New Britain</option>
+            <option>Bougainville</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>City / District <span class="req">*</span></label>
+          <input type="text" name="city" required>
+        </div>
+        <div class="form-group full">
+          <label>Full Address <span class="req">*</span></label>
+          <input type="text" name="address" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOCIO-PROFESSIONAL SITUATION -->
+    <div class="form-section">
+      <h3>Socio-Professional Situation</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Employment Status <span class="req">*</span></label>
+          <select name="employment_status" required>
+            <option value="">-- Select --</option>
+            <option>Student</option>
+            <option>Unemployed</option>
+            <option>Employed</option>
+            <option>Entrepreneur / Self-employed</option>
+            <option>Farmer / Fisher</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Education Level <span class="req">*</span></label>
+          <select name="education_level" required>
+            <option value="">-- Select --</option>
+            <option>Primary</option>
+            <option>Secondary</option>
+            <option>University</option>
+            <option>Vocational Training</option>
+            <option>None</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT -->
+    <div class="form-section">
+      <h3>Project Information</h3>
+      <div class="form-grid">
+        <div class="form-group full">
+          <label>Project Title <span class="req">*</span></label>
+          <input type="text" name="project_title" required>
+        </div>
+        <div class="form-group">
+          <label>Project Category <span class="req">*</span></label>
+          <select name="project_category" required>
+            <option value="">-- Select --</option>
+            <option>Education / Scholarship</option>
+            <option>Agriculture</option>
+            <option>Small Business / Entrepreneurship</option>
+            <option>Health</option>
+            <option>Craftsmanship</option>
+            <option>Fishing</option>
+            <option>Community Infrastructure</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Estimated Project Duration <span class="req">*</span></label>
+          <input type="text" name="project_duration" placeholder="E.g., 12 months" required>
+        </div>
+        <div class="form-group full">
+          <label>Detailed Project Description <span class="req">*</span></label>
+          <textarea name="project_description" required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Required Budget (in PGK) <span class="req">*</span></label>
+          <input type="number" name="budget" min="0" required>
+        </div>
+        <div class="form-group">
+          <label>Number of Project Beneficiaries <span class="req">*</span></label>
+          <input type="number" name="beneficiaries_count" min="1" required>
+        </div>
+        <div class="form-group full">
+          <label>Expected Impact of the Project <span class="req">*</span></label>
+          <textarea name="expected_impact" required></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- BANK INFO -->
+    <div class="form-section">
+      <h3>Bank Information (for aid disbursement)</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Bank Name <span class="req">*</span></label>
+          <input type="text" name="bank_name" required>
+        </div>
+        <div class="form-group">
+          <label>Account Number <span class="req">*</span></label>
+          <input type="text" name="account_number" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- DECLARATION -->
+    <div class="form-section">
+      <div class="checkbox-group">
+        <input type="checkbox" id="declaration" required>
+        <label for="declaration">I certify on my honor that the information provided above is accurate and complete, and I agree that IMPACT PROJECT PNG may use it to process my financial aid application.</label>
+      </div>
+    </div>
+
+    <button type="submit" class="btn-submit-form" id="btn-submit">Submit My Request</button>
+    <p id="form-message" class="form-message"></p>
+  </form>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>IMPACT PNG</h4>
+        <p>Non-refundable financial aid organization in Papua New Guinea.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <a href="about.html">About</a>
+        <a href="criteria.html">Eligibility</a>
+        <a href="apply.html">Apply</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="mailto:pngimpactproject@gmail.com">pngimpactproject@gmail.com</a>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <a href="#">Facebook</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 IMPACT PROJECT PNG — All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="assets/js/emailjs-config.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/applyForm.js"></script>
+</body>
+</html>

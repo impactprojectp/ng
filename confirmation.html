@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application Confirmed | IMPACT PROJECT PNG</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/application.css">
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="logo">IMPACT <span>PNG</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="criteria.html">Eligibility</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="apply.html" class="btn-inscrire">Sign Up</a></li>
+      <li><a href="apply.html" class="btn-cta">Submit Your Request</a></li>
+    </ul>
+    <div class="burger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<section class="hero" style="min-height:280px; background: linear-gradient(135deg, var(--bleu-principal), var(--vert-accent));">
+  <div class="hero-content">
+    <h1>Request Submitted Successfully</h1>
+  </div>
+</section>
+
+<div class="container">
+  <div class="confirmation-box">
+    <div class="icon-check">✓</div>
+    <h2 id="applicant-name">Thank you for your application!</h2>
+    <p class="note">Your case has been successfully recorded and forwarded to our team. Please keep your case number below safe — you will need it for any follow-up.</p>
+
+    <div class="dossier-id" id="case-id">Loading...</div>
+
+    <p class="note" id="case-details"></p>
+
+    <a href="index.html" class="btn-hero" style="background: var(--bleu-principal); color: var(--blanc);">Back to Home</a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>IMPACT PNG</h4>
+        <p>Non-refundable financial aid organization in Papua New Guinea.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <a href="about.html">About</a>
+        <a href="criteria.html">Eligibility</a>
+        <a href="apply.html">Apply</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="contact.html">Contact Us</a>
+        <a href="mailto:pngimpactproject@gmail.com">pngimpactproject@gmail.com</a>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <a href="#">Facebook</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 IMPACT PROJECT PNG — All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const data = localStorage.getItem('lastImpactPNGCase');
+    if (!data) {
+      document.getElementById('case-id').textContent = "No case found";
+      document.getElementById('case-details').textContent = "Please fill out the application form to receive a case number.";
+      return;
+    }
+    const caseData = JSON.parse(data);
+    document.getElementById('applicant-name').textContent = `Thank you, ${caseData.first_name} ${caseData.last_name}!`;
+    document.getElementById('case-id').textContent = caseData.id;
+    document.getElementById('case-details').textContent =
+      `Project "${caseData.project_title}" submitted on ${caseData.submission_date}. A confirmation has been sent to ${caseData.email}.`;
+  });
+</script>
+</body>
+</html>
